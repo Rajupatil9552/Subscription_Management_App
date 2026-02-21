@@ -26,7 +26,15 @@ app.post(
 // -------------------------------------------------------------
 // STANDARD MIDDLEWARE FOR OTHER ROUTES
 // -------------------------------------------------------------
-app.use(cors());
+app.use(cors({
+  origin: [
+    '*',
+    
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 app.use(express.json());       // Parses standard JSON payloads
 app.use(express.urlencoded({ extended: true }));
 
