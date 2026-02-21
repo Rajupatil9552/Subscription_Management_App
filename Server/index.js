@@ -28,8 +28,10 @@ app.post(
 // -------------------------------------------------------------
 app.use(cors({
   origin: [
-    '*',
-    
+    'https://subscription-management-app-six.vercel.app',
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'http://localhost:5175'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
